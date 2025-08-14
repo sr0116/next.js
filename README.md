@@ -21,15 +21,23 @@
   ↳ 고정된 페이지 이동은 `<Link>`로 가능하고, 코드 기반 동적 이동은 `useRouter`를 사용해야 함 (`"use client"` 필요).
 
 - **테일윈드, axios, fetch 문법 개념 이해**  
+
   ↳ Tailwind는 클래스 기반 유틸리티 CSS 프레임워크, axios/fetch는 API 호출용. fetch는 내장, axios는 설치 필요.
 
 - **동적 라우팅  [] 패키지 이용해서 사용**  
   ↳ 파일명에 대괄호(`[ ]`)를 사용하면 해당 경로를 변수처럼 처리 가능. `/product/[id]` → `id` 값을 URL에서 직접 받음.
 
+- **동적 라우팅 user 정보 가져오기**
+      ↳ api user route 에서 먼저 유저 정보 입력 후, 
+      export async function GET(req) { } 여기에서 mno 값을 가져 오기 위해 먼저 const {searchParams}= new URL(req.url)로 새 URL 지정해줘야 함
+
+
+
 - **next.js 에서 리액트 변환하기**  
   ↳ CRA(React)에서 Next.js로 옮길 때는 폴더 구조, 라우팅 방식, API 호출 경로를 Next.js에 맞게 조정해야 함.
 
----
+
+
 
 📌 **추가 개념 정리**
 - `"use client"`는 성능을 위해 꼭 필요한 컴포넌트에만 적용.
