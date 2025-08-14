@@ -1,36 +1,39 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# 🚀 Next.js 첫 시작 — 1일차
 
-## Getting Started
+![Next.js](https://img.shields.io/badge/Next.js-black?style=flat-square&logo=next.js)
+![React](https://img.shields.io/badge/React-61DAFB?style=flat-square&logo=react)
+![TailwindCSS](https://img.shields.io/badge/Tailwind_CSS-38B2AC?style=flat-square&logo=tailwind-css)
+![Axios](https://img.shields.io/badge/Axios-5A29E4?style=flat-square&logo=axios)
+![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?style=flat-square&logo=javascript)
 
-First, run the development server:
+---
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+## 🌱 Day 1 — Next.js 첫 시작
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
-You can start editing the page by modifying `app/page.js`. The page auto-updates as you edit the file.
+- **"use client" - 클라이언트 컴포넌트(Client Component)**  
+  ↳ Next.js 13+에서 기본은 서버 컴포넌트이므로, 브라우저에서 동적 기능(이벤트, 상태 관리, 브라우저 API) 사용 시 파일 최상단에 `"use client"` 선언 필요.
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+- **리액트 내에선 import React from "react"; 작성하지 않고도 사용 가능**  
+  ↳ 자동 JSX 변환 기능이 활성화돼 있어 필수 아님. 필요하면 명시적으로 작성 가능.
 
-## Learn More
+- **card와 count 연결하는 법(경로 및 페이지 전환 연결 - Link import 해서 사용해야 함)**  
+  ↳ 고정된 페이지 이동은 `<Link>`로 가능하고, 코드 기반 동적 이동은 `useRouter`를 사용해야 함 (`"use client"` 필요).
 
-To learn more about Next.js, take a look at the following resources:
+- **테일윈드, axios, fetch 문법 개념 이해**  
+  ↳ Tailwind는 클래스 기반 유틸리티 CSS 프레임워크, axios/fetch는 API 호출용. fetch는 내장, axios는 설치 필요.
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+- **동적 라우팅  [] 패키지 이용해서 사용**  
+  ↳ 파일명에 대괄호(`[ ]`)를 사용하면 해당 경로를 변수처럼 처리 가능. `/product/[id]` → `id` 값을 URL에서 직접 받음.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+- **next.js 에서 리액트 변환하기**  
+  ↳ CRA(React)에서 Next.js로 옮길 때는 폴더 구조, 라우팅 방식, API 호출 경로를 Next.js에 맞게 조정해야 함.
 
-## Deploy on Vercel
+---
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+📌 **추가 개념 정리**
+- `"use client"`는 성능을 위해 꼭 필요한 컴포넌트에만 적용.
+- 동적 라우팅은 `[param].js` 파일명 패턴으로 구현.
+- Tailwind 적용 시 `tailwind.config.js`에서 경로(content) 설정 필수.
+- axios/fetch 사용 시 비동기 처리(`async/await`) 구조를 익히는 게 중요.
+- React → Next.js 변환 시 **정적 페이지(SSR/SSG)**와 **클라이언트 컴포넌트** 개념을 구분해야 함.
