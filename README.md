@@ -1,4 +1,4 @@
-# 🚀 Next.js 첫 시작 — 1일차
+# Next.js 첫 시작 — 1일차
 
 ![Next.js](https://img.shields.io/badge/Next.js-black?style=flat-square&logo=next.js)
 ![React](https://img.shields.io/badge/React-61DAFB?style=flat-square&logo=react)
@@ -8,40 +8,25 @@
 
 ---
 
-## 🌱 Day 1 — Next.js 첫 시작
+## ✔ Day 1~3 — Next.js 첫 시작
 
+`"use client"` : 클라이언트에서 상태/이벤트 쓰려면 파일 최상단에 선언
+- React는 `import React` 없이도 JSX 사용 가능
+- 페이지 이동: `<Link>` / 코드 이동: `useRouter`
+- Tailwind: 클래스 기반 CSS 프레임워크
+- axios / fetch: API 호출용 (fetch는 기본, axios는 설치 필요)
+- 동적 라우팅: `[id].js` → URL 파라미터로 값 받기
+- API Route에서 `new URL(req.url)`로 `searchParams` 추출 가능
 
-- **"use client" - 클라이언트 컴포넌트(Client Component)**  
-  ↳ Next.js 13+에서 기본은 서버 컴포넌트이므로, 브라우저에서 동적 기능(이벤트, 상태 관리, 브라우저 API) 사용 시 파일 최상단에 `"use client"` 선언 필요.
+---
 
-- **리액트 내에선 import React from "react"; 작성하지 않고도 사용 가능**  
-  ↳ 자동 JSX 변환 기능이 활성화돼 있어 필수 아님. 필요하면 명시적으로 작성 가능.
+## ✔ Day 4~8 실습 — 간단 게시판 앱
 
-- **card와 count 연결하는 법(경로 및 페이지 전환 연결 - Link import 해서 사용해야 함)**  
-  ↳ 고정된 페이지 이동은 `<Link>`로 가능하고, 코드 기반 동적 이동은 `useRouter`를 사용해야 함 (`"use client"` 필요).
+- 부모(Board)에서 `posts`, `openIdx`를 state로 관리
+- 자식(PostForm) → 제목/내용 입력 → 부모의 `onAdd` 실행
+- 자식(PostList) → props로 글 목록 출력
+- 제목 클릭 시 `handleOpenIdx`로 내용 펼치기/닫기
+- "삭제" 버튼 클릭 시 부모의 `onRemove` 실행 → 글 제거
+- 모든 컴포넌트(`Board`, `PostForm`, `PostList`)에 `"use client"` 선언 필요
 
-- **테일윈드, axios, fetch 문법 개념 이해**  
-
-  ↳ Tailwind는 클래스 기반 유틸리티 CSS 프레임워크, axios/fetch는 API 호출용. fetch는 내장, axios는 설치 필요.
-
-- **동적 라우팅  [] 패키지 이용해서 사용**  
-  ↳ 파일명에 대괄호(`[ ]`)를 사용하면 해당 경로를 변수처럼 처리 가능. `/product/[id]` → `id` 값을 URL에서 직접 받음.
-
-- **동적 라우팅 user 정보 가져오기**
-      ↳ api user route 에서 먼저 유저 정보 입력 후, 
-      export async function GET(req) { } 여기에서 mno 값을 가져 오기 위해 먼저 const {searchParams}= new URL(req.url)로 새 URL 지정해줘야 함
-
-
-
-- **next.js 에서 리액트 변환하기**  
-  ↳ CRA(React)에서 Next.js로 옮길 때는 폴더 구조, 라우팅 방식, API 호출 경로를 Next.js에 맞게 조정해야 함.
-
-
-
-
-📌 **추가 개념 정리**
-- `"use client"`는 성능을 위해 꼭 필요한 컴포넌트에만 적용.
-- 동적 라우팅은 `[param].js` 파일명 패턴으로 구현.
-- Tailwind 적용 시 `tailwind.config.js`에서 경로(content) 설정 필수.
-- axios/fetch 사용 시 비동기 처리(`async/await`) 구조를 익히는 게 중요.
-- React → Next.js 변환 시 **정적 페이지(SSR/SSG)**와 **클라이언트 컴포넌트** 개념을 구분해야 함.
+  
