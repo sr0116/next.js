@@ -23,7 +23,7 @@ export default function TodoPage() {
 
   return (
       <main className="flex flex-col items-center justify-center min-h-screen bg-gray-50">
-        <h1 className="text-2xl font-bold mb-6">Day6 - Add/Remove 이벤트</h1>
+        <h1 className="text-2xl font-bold mb-6">Day7 - Add/Remove 이벤트</h1>
 
         {/* 입력 폼 */}
         <form onSubmit={handleAdd} className="flex gap-2 mb-4">
