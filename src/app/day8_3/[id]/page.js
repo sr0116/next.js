@@ -13,7 +13,7 @@ export default function UserDetail({ params }) {
   if (!user) return <p>존재하지 않는 사용자입니다.</p>;
 
   return (
-      <div className="flex flex-col items-center justify-center min-h-screen bg-gray-50">
+      <div className="flex flex-col items-center justify-center min-h-screen">
         <h1 className="text-2xl font-bold mb-6">사용자 상세</h1>
         <p>아이디: {id}</p>
         <p>이름: {user.name}</p>

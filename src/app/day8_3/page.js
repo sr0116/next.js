@@ -1,9 +1,9 @@
 "use client"
-import Counter from "@/component/day8/Counter";
-import MemberList from "@/component/day8/MemberList";
-import PostBoard from "@/component/day8/PostBoard";
-import TodoSearch from "@/component/day8/TodoSearch";
-import UserList from "@/component/day8/UserList";
+import Counter from "@/component/day8_3/Counter";
+import MemberList from "@/component/day8_3/MemberList";
+import PostBoard from "@/component/day8_3/PostBoard";
+import TodoSearch from "@/component/day8_3/TodoSearch";
+import UserList from "@/component/day8_3/UserList";
 
 export default function Day8 () {
   return (

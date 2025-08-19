@@ -12,7 +12,7 @@ return (
       {users.map((user) => (
           <li
           key={user.id}>
-            <Link href={`/day8/${user.id}`}>{user.name} 상세보기</Link>
+            <Link href={`/day8_3/${user.id}`}>{user.name} 상세보기</Link>
           </li>
       ))}
     </ul>
