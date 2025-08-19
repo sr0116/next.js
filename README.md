@@ -29,4 +29,13 @@
 - "삭제" 버튼 클릭 시 부모의 `onRemove` 실행 → 글 제거
 - 모든 컴포넌트(`Board`, `PostForm`, `PostList`)에 `"use client"` 선언 필요
 
+---
+
+## ✔ Day 7_2  — 조건부 렌더링 & 로그인 실습 (로그인)
+
+- JSX 안에서 **if / 삼항 연산자 / && 연산자**로 조건부 렌더링 
+- if, 삼항, && 로 조건부 렌더링
+- useState 로 id/pw, user 상태 관리
+- userList.find() 로 로그인 검증  
+  
   
