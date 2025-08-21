@@ -56,6 +56,7 @@
 - useEffect([id]) : id 값이 바뀔 때마다 실행
 - 없는 메뉴 번호 → 모달 안내 + “처음으로 돌아가기” 버튼 제공
 - 메뉴 UI를 Menu1, Menu2, Menu3 컴포넌트로 분리
+
 ---
   
 ## ✔ Day 10~11 — 동적 라우팅 + CSS Module
@@ -67,6 +68,16 @@
 - React 문법 체크:
 - JSX에서 함수 실행은 {renderContent()} (❌ {renderContent})
 - map 안에서는 { 중괄호 } return 또는 소괄호 () 필수
+
+---
+## ✔ Day 12 — DB 연결 & Read 실습 (Next.js + MariaDB)
+
+- lib/db.js 에서 mysql2/promise 로 DB Pool 생성
+- API Route(GET) 에서 MariaDB `member` 테이블 조회 → JSON 응답
+- 클라이언트 컴포넌트에서 버튼 클릭 시 fetch 로 DB 데이터 가져오기
+- useState 로 회원 리스트 상태 관리 후 map() 으로 출력 ([]) 배열 형태로
+- 실제 DB 데이터가 브라우저에서 조회
+
 
   
   
