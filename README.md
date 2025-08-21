@@ -45,7 +45,16 @@
 - `find()` 로 특정 글 조회  
 - `reduce()` 로 글 통계 (총 글 수, 글자 수, 평균 글자 수)  
 - `uuid` 로 고유 id 생성  (구버전)
-- 제목 클릭 시 **토글(조건부 렌더링, 삼항 연산자)** 로 내용 펼치기/닫기  
+- 제목 클릭 시 **토글(조건부 렌더링, 삼항 연산자)** 로 내용 펼치기/닫기
 
+## ✔ Day 9 — Next.js 동적 라우팅 기초
+
+- app/day9/page.js → /day9 (첫 페이지)
+- app/day9/menu/page.js → /day9/menu (메뉴 목록)
+- 이동 경로 : app/day9/menu/[id]/page.js → /day9/menu/1, /day9/menu/2, /day9/menu/3
+- params : URL 파라미터(id) 가져오기 (최신이랑 구 버전 다름)
+- useEffect([id]) : id 값이 바뀔 때마다 실행
+- 없는 메뉴 번호 → 모달 안내 + “처음으로 돌아가기” 버튼 제공
+- 메뉴 UI를 Menu1, Menu2, Menu3 컴포넌트로 분리 
   
   
