@@ -46,7 +46,7 @@
 - `reduce()` 로 글 통계 (총 글 수, 글자 수, 평균 글자 수)  
 - `uuid` 로 고유 id 생성  (구버전)
 - 제목 클릭 시 **토글(조건부 렌더링, 삼항 연산자)** 로 내용 펼치기/닫기
-
+---
 ## ✔ Day 9 — Next.js 동적 라우팅 기초
 
 - app/day9/page.js → /day9 (첫 페이지)
@@ -55,6 +55,18 @@
 - params : URL 파라미터(id) 가져오기 (최신이랑 구 버전 다름)
 - useEffect([id]) : id 값이 바뀔 때마다 실행
 - 없는 메뉴 번호 → 모달 안내 + “처음으로 돌아가기” 버튼 제공
-- 메뉴 UI를 Menu1, Menu2, Menu3 컴포넌트로 분리 
+- 메뉴 UI를 Menu1, Menu2, Menu3 컴포넌트로 분리
+---
+  
+## ✔ Day 10~11 — 동적 라우팅 + CSS Module
+
+-동적 라우팅: app/day10/day11/[id]/page.js → URL 파라미터(params.id)로 페이지 구분
+- CSS Module: day11.module.css → 파일 단위 스타일 관리
+- 장점 :클래스명이 고유하게 변환됨 → text_abc123 처럼 랜덤 붙음, 따라서 전역 충돌 없음
+- 사용하면 좋은 점 : 컴포넌트 단위 스타일링에 적합(조건부 스타일링 가능!!)
+- React 문법 체크:
+- JSX에서 함수 실행은 {renderContent()} (❌ {renderContent})
+- map 안에서는 { 중괄호 } return 또는 소괄호 () 필수
+
   
   
